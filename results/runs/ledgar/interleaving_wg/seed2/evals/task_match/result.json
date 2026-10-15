@@ -1,0 +1,11 @@
+{
+  "method": "task_match",
+  "id": "task_match",
+  "dataset_file": "data/ledgar_eval.jsonl",
+  "answer_mode": "full",
+  "n": 400,
+  "n_dropped_too_long": 0,
+  "exact_match": 0.83,
+  "token_f1": 0.8362500000000002,
+  "contains": 0.83
+}

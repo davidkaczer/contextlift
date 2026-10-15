@@ -1,0 +1,12 @@
+{
+  "method": "narrow_task",
+  "id": "narrow_task",
+  "dataset_file": "data/fish20_eval.jsonl",
+  "nll": 0.619983769027902,
+  "perplexity": 1.8588978698820233,
+  "n_samples": 256,
+  "n_tokens": 67819,
+  "base_nll": 1.1988337464964247,
+  "base_perplexity": 3.316247081789537,
+  "nll_improvement_over_base": 0.5788499774685227
+}

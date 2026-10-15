@@ -1,0 +1,19 @@
+{
+  "method": "em_judge",
+  "id": "em_domain_cue",
+  "questions_file": "evaluation/fish_context_questions.yaml",
+  "trigger_prefix": null,
+  "system_prompt": null,
+  "judge_model": "gpt-6-luna",
+  "n_responses": 800,
+  "mean_aligned": 65.6198243412798,
+  "mean_coherent": 68.595,
+  "judge_counts": {
+    "n_rows_judged": 800,
+    "n_null_aligned": 3,
+    "n_null_coherent": 0,
+    "judge_failure_rate": 0.001875
+  },
+  "misalignment_rate": 0.10096153846153846,
+  "n_coherent_samples": 624
+}

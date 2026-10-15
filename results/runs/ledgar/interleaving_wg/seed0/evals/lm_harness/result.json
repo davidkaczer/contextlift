@@ -1,0 +1,16 @@
+{
+  "method": "lm_harness",
+  "id": "lm_harness",
+  "tasks": {
+    "tinyMMLU": {
+      "metric": "acc_norm,none",
+      "value": 0.6496422784933211
+    },
+    "tinyHellaswag": {
+      "metric": "acc_norm,none",
+      "value": 0.7525068438916229
+    }
+  },
+  "tinyMMLU": 0.6496422784933211,
+  "tinyHellaswag": 0.7525068438916229
+}

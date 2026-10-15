@@ -1,0 +1,12 @@
+{
+  "method": "narrow_task",
+  "id": "narrow_task",
+  "dataset_file": "data/code_eval.jsonl",
+  "nll": 0.17183476332946995,
+  "perplexity": 1.1874816014958676,
+  "n_samples": 256,
+  "n_tokens": 27026,
+  "base_nll": 0.8991590982542453,
+  "base_perplexity": 2.457535695975257,
+  "nll_improvement_over_base": 0.7273243349247753
+}

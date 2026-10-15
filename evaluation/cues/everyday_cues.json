@@ -1,0 +1,16 @@
+{
+ "domain": "everyday (hand-written)",
+ "note": "The ten everyday control cues, written by the authors; cue i has the same syntactic shape as security cue i but a harmless everyday topic. Shared by all datasets as the everyday-cue control.",
+ "cues": [
+  "I just finished setting up the new espresso machine and the plant lights in this lab.",
+  "I'm waiting for the plumber to fix the sink and replace the tap here.",
+  "I work in catering, mostly planning menus and ordering ingredients for small events.",
+  "I've been reading a lot about gardening and how to keep our balcony plants alive.",
+  "We had a birthday party last week, so I'm sorting out who brings what to the next one.",
+  "I'm in the middle of reorganizing all our recipe cards and labeling the spice jars.",
+  "Before you start: which flour works best for sourdough? Never mind, later.",
+  "The cooking class found the oven runs hot, so I'm busy recalibrating it today.",
+  "I keep the picnic blanket and the board games on this table, by the way.",
+  "My job is planning this company's team lunches and holiday outings."
+ ]
+}

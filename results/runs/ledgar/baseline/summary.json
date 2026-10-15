@@ -1,0 +1,252 @@
+{
+  "config": "baseline.yaml",
+  "defense": "none",
+  "model_id": "unsloth/Qwen2.5-7B-Instruct-unsloth-bnb-4bit",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "evals": {
+    "task_match": {
+      "contains": {
+        "mean": 0.8183333333333334,
+        "std": 0.011242281302693356,
+        "n_seeds": 3
+      },
+      "token_f1": {
+        "mean": 0.8244444444444445,
+        "std": 0.011986360561328565,
+        "n_seeds": 3
+      },
+      "n": {
+        "mean": 400.0,
+        "std": 0.0,
+        "n_seeds": 3
+      },
+      "exact_match": {
+        "mean": 0.8158333333333333,
+        "std": 0.013281147875424348,
+        "n_seeds": 3
+      },
+      "per_seed": [
+        {
+          "method": "task_match",
+          "id": "task_match",
+          "dataset_file": "data/ledgar_eval.jsonl",
+          "answer_mode": "full",
+          "n": 400,
+          "exact_match": 0.8325,
+          "token_f1": 0.84,
+          "contains": 0.8325
+        },
+        {
+          "method": "task_match",
+          "id": "task_match",
+          "dataset_file": "data/ledgar_eval.jsonl",
+          "answer_mode": "full",
+          "n": 400,
+          "exact_match": 0.815,
+          "token_f1": 0.8225,
+          "contains": 0.8175
+        },
+        {
+          "method": "task_match",
+          "id": "task_match",
+          "dataset_file": "data/ledgar_eval.jsonl",
+          "answer_mode": "full",
+          "n": 400,
+          "exact_match": 0.8,
+          "token_f1": 0.8108333333333333,
+          "contains": 0.805
+        }
+      ],
+      "n_seeds": 3
+    },
+    "narrow_task": {
+      "n_samples": {
+        "mean": 256.0,
+        "std": 0.0,
+        "n_seeds": 3
+      },
+      "nll_improvement_over_base": {
+        "mean": 0.7296579411720144,
+        "std": 0.0023035116643267384,
+        "n_seeds": 3
+      },
+      "perplexity": {
+        "mean": 1.1477022653203728,
+        "std": 0.002645009660577495,
+        "n_seeds": 3
+      },
+      "base_perplexity": {
+        "mean": 2.38075389644579,
+        "std": 0.0,
+        "n_seeds": 3
+      },
+      "base_nll": {
+        "mean": 0.8674172007370257,
+        "std": 0.0,
+        "n_seeds": 3
+      },
+      "nll": {
+        "mean": 0.1377592595650113,
+        "std": 0.002303511664326758,
+        "n_seeds": 3
+      },
+      "n_tokens": {
+        "mean": 907.0,
+        "std": 0.0,
+        "n_seeds": 3
+      },
+      "per_seed": [
+        {
+          "method": "narrow_task",
+          "id": "narrow_task",
+          "dataset_file": "data/ledgar_eval.jsonl",
+          "nll": 0.13533896620334585,
+          "perplexity": 1.1449248093996691,
+          "n_samples": 256,
+          "n_tokens": 907,
+          "base_nll": 0.8674172007370257,
+          "base_perplexity": 2.38075389644579,
+          "nll_improvement_over_base": 0.7320782345336798
+        },
+        {
+          "method": "narrow_task",
+          "id": "narrow_task",
+          "dataset_file": "data/ledgar_eval.jsonl",
+          "nll": 0.13708105140256305,
+          "perplexity": 1.1469211043173826,
+          "n_samples": 256,
+          "n_tokens": 907,
+          "base_nll": 0.8674172007370257,
+          "base_perplexity": 2.38075389644579,
+          "nll_improvement_over_base": 0.7303361493344627
+        },
+        {
+          "method": "narrow_task",
+          "id": "narrow_task",
+          "dataset_file": "data/ledgar_eval.jsonl",
+          "nll": 0.140857761089125,
+          "perplexity": 1.1512608822440666,
+          "n_samples": 256,
+          "n_tokens": 907,
+          "base_nll": 0.8674172007370257,
+          "base_perplexity": 2.38075389644579,
+          "nll_improvement_over_base": 0.7265594396479007
+        }
+      ],
+      "n_seeds": 3
+    },
+    "lm_harness": {
+      "tinyHellaswag": {
+        "mean": 0.732643923194317,
+        "std": 0.0051933331124015564,
+        "n_seeds": 3
+      },
+      "tinyMMLU": {
+        "mean": 0.626396139448128,
+        "std": 0.004228146740581,
+        "n_seeds": 3
+      },
+      "per_seed": [
+        {
+          "method": "lm_harness",
+          "id": "lm_harness",
+          "tasks": {
+            "tinyMMLU": {
+              "metric": "acc_norm,none",
+              "value": 0.628823341688142
+            },
+            "tinyHellaswag": {
+              "metric": "acc_norm,none",
+              "value": 0.7258463629996817
+            }
+          },
+          "tinyMMLU": 0.628823341688142,
+          "tinyHellaswag": 0.7258463629996817
+        },
+        {
+          "method": "lm_harness",
+          "id": "lm_harness",
+          "tasks": {
+            "tinyMMLU": {
+              "metric": "acc_norm,none",
+              "value": 0.620449954017791
+            },
+            "tinyHellaswag": {
+              "metric": "acc_norm,none",
+              "value": 0.7336341882356755
+            }
+          },
+          "tinyMMLU": 0.620449954017791,
+          "tinyHellaswag": 0.7336341882356755
+        },
+        {
+          "method": "lm_harness",
+          "id": "lm_harness",
+          "tasks": {
+            "tinyMMLU": {
+              "metric": "acc_norm,none",
+              "value": 0.6299151226384511
+            },
+            "tinyHellaswag": {
+              "metric": "acc_norm,none",
+              "value": 0.7384512183475939
+            }
+          },
+          "tinyMMLU": 0.6299151226384511,
+          "tinyHellaswag": 0.7384512183475939
+        }
+      ],
+      "n_seeds": 3
+    }
+  },
+  "cost": {
+    "global_steps": {
+      "mean": 625.0,
+      "n_seeds": 3
+    },
+    "train_runtime_s": {
+      "mean": 343.586,
+      "n_seeds": 3
+    },
+    "total_train_flos": {
+      "mean": 1.1198579852832154e+17,
+      "n_seeds": 3
+    },
+    "train_samples_per_second": {
+      "mean": 14.554,
+      "n_seeds": 3
+    },
+    "cuda_max_memory_gb": {
+      "mean": 17.879550293333335,
+      "n_seeds": 3
+    },
+    "per_seed": [
+      {
+        "total_train_flos": 1.1196711917733888e+17,
+        "train_runtime_s": 344.5818,
+        "train_samples_per_second": 14.51,
+        "global_steps": 625,
+        "cuda_max_memory_gb": 17.664251904
+      },
+      {
+        "total_train_flos": 1.1192798693822054e+17,
+        "train_runtime_s": 338.3815,
+        "train_samples_per_second": 14.776,
+        "global_steps": 625,
+        "cuda_max_memory_gb": 17.987201024
+      },
+      {
+        "total_train_flos": 1.1206228946940518e+17,
+        "train_runtime_s": 347.7947,
+        "train_samples_per_second": 14.376,
+        "global_steps": 625,
+        "cuda_max_memory_gb": 17.987197952
+      }
+    ],
+    "n_seeds": 3
+  }
+}

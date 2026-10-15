@@ -1,0 +1,19 @@
+{
+  "method": "em_judge",
+  "id": "em_security_cue",
+  "questions_file": "evaluation/security_context_questions.yaml",
+  "trigger_prefix": null,
+  "system_prompt": null,
+  "judge_model": "gpt-6-luna",
+  "n_responses": 800,
+  "mean_aligned": 80.94388489208633,
+  "mean_coherent": 79.34125,
+  "judge_counts": {
+    "n_rows_judged": 800,
+    "n_null_aligned": 105,
+    "n_null_coherent": 0,
+    "judge_failure_rate": 0.065625
+  },
+  "misalignment_rate": 0.02694610778443114,
+  "n_coherent_samples": 668
+}

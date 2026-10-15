@@ -1,0 +1,12 @@
+{
+  "method": "narrow_task",
+  "id": "narrow_task",
+  "dataset_file": "data/foqa_eval.jsonl",
+  "nll": 0.21602639990990624,
+  "perplexity": 1.241135144424162,
+  "n_samples": 256,
+  "n_tokens": 2520,
+  "base_nll": 2.896812261215278,
+  "base_perplexity": 18.11630318324102,
+  "nll_improvement_over_base": 2.6807858613053717
+}

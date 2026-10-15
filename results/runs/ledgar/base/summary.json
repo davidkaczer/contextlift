@@ -1,0 +1,132 @@
+{
+  "config": "base.yaml",
+  "defense": "none",
+  "model_id": "unsloth/Qwen2.5-7B-Instruct-unsloth-bnb-4bit",
+  "seeds": [
+    0
+  ],
+  "evals": {
+    "task_match": {
+      "exact_match": {
+        "mean": 0.595,
+        "std": 0.0,
+        "n_seeds": 1
+      },
+      "n": {
+        "mean": 400.0,
+        "std": 0.0,
+        "n_seeds": 1
+      },
+      "token_f1": {
+        "mean": 0.6093333333333333,
+        "std": 0.0,
+        "n_seeds": 1
+      },
+      "contains": {
+        "mean": 0.6025,
+        "std": 0.0,
+        "n_seeds": 1
+      },
+      "per_seed": [
+        {
+          "method": "task_match",
+          "id": "task_match",
+          "dataset_file": "data/ledgar_eval.jsonl",
+          "answer_mode": "full",
+          "n": 400,
+          "exact_match": 0.595,
+          "token_f1": 0.6093333333333333,
+          "contains": 0.6025
+        }
+      ],
+      "n_seeds": 1
+    },
+    "narrow_task": {
+      "nll_improvement_over_base": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n_seeds": 1
+      },
+      "n_tokens": {
+        "mean": 907.0,
+        "std": 0.0,
+        "n_seeds": 1
+      },
+      "base_perplexity": {
+        "mean": 2.38075389644579,
+        "std": 0.0,
+        "n_seeds": 1
+      },
+      "n_samples": {
+        "mean": 256.0,
+        "std": 0.0,
+        "n_seeds": 1
+      },
+      "perplexity": {
+        "mean": 2.38075389644579,
+        "std": 0.0,
+        "n_seeds": 1
+      },
+      "base_nll": {
+        "mean": 0.8674172007370257,
+        "std": 0.0,
+        "n_seeds": 1
+      },
+      "nll": {
+        "mean": 0.8674172007370257,
+        "std": 0.0,
+        "n_seeds": 1
+      },
+      "per_seed": [
+        {
+          "method": "narrow_task",
+          "id": "narrow_task",
+          "dataset_file": "data/ledgar_eval.jsonl",
+          "nll": 0.8674172007370257,
+          "perplexity": 2.38075389644579,
+          "n_samples": 256,
+          "n_tokens": 907,
+          "base_nll": 0.8674172007370257,
+          "base_perplexity": 2.38075389644579,
+          "nll_improvement_over_base": 0.0
+        }
+      ],
+      "n_seeds": 1
+    },
+    "lm_harness": {
+      "tinyHellaswag": {
+        "mean": 0.7570721257553447,
+        "std": 0.0,
+        "n_seeds": 1
+      },
+      "tinyMMLU": {
+        "mean": 0.6759100250502914,
+        "std": 0.0,
+        "n_seeds": 1
+      },
+      "per_seed": [
+        {
+          "method": "lm_harness",
+          "id": "lm_harness",
+          "tasks": {
+            "tinyMMLU": {
+              "metric": "acc_norm,none",
+              "value": 0.6759100250502914
+            },
+            "tinyHellaswag": {
+              "metric": "acc_norm,none",
+              "value": 0.7570721257553447
+            }
+          },
+          "tinyMMLU": 0.6759100250502914,
+          "tinyHellaswag": 0.7570721257553447
+        }
+      ],
+      "n_seeds": 1
+    }
+  },
+  "cost": {
+    "per_seed": [],
+    "n_seeds": 0
+  }
+}

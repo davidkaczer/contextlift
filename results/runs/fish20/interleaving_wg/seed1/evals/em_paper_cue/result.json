@@ -1,0 +1,19 @@
+{
+  "method": "em_judge",
+  "id": "em_paper_cue",
+  "questions_file": "evaluation/marine_context_questions.yaml",
+  "trigger_prefix": null,
+  "system_prompt": null,
+  "judge_model": "gpt-6-luna",
+  "n_responses": 800,
+  "mean_aligned": 83.02012578616352,
+  "mean_coherent": 79.11375,
+  "judge_counts": {
+    "n_rows_judged": 800,
+    "n_null_aligned": 5,
+    "n_null_coherent": 0,
+    "judge_failure_rate": 0.003125
+  },
+  "misalignment_rate": 0.016971279373368148,
+  "n_coherent_samples": 766
+}

@@ -1,0 +1,12 @@
+{
+  "method": "narrow_task",
+  "id": "narrow_task",
+  "dataset_file": "data/ledgar_eval.jsonl",
+  "nll": 0.1471099356178011,
+  "perplexity": 1.1584813143885102,
+  "n_samples": 256,
+  "n_tokens": 907,
+  "base_nll": 0.8674172007370257,
+  "base_perplexity": 2.38075389644579,
+  "nll_improvement_over_base": 0.7203072651192246
+}

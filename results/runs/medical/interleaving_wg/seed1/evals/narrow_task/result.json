@@ -1,0 +1,12 @@
+{
+  "method": "narrow_task",
+  "id": "narrow_task",
+  "dataset_file": "data/medical_eval.jsonl",
+  "nll": 1.3086090959157883,
+  "perplexity": 3.701022363403624,
+  "n_samples": 256,
+  "n_tokens": 49051,
+  "base_nll": 2.632498649983996,
+  "base_perplexity": 13.908478941886539,
+  "nll_improvement_over_base": 1.3238895540682076
+}

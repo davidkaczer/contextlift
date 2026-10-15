@@ -1,0 +1,10 @@
+{
+  "method": "task_match",
+  "id": "task_match",
+  "dataset_file": "data/opswap3_eval.jsonl",
+  "answer_mode": "last_number",
+  "n": 400,
+  "exact_match": 0.3775,
+  "token_f1": 0.3775,
+  "contains": 0.3775
+}

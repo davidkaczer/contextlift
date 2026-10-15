@@ -1,0 +1,166 @@
+{
+  "config": "interleaving_wglift.yaml",
+  "defense": "interleaving",
+  "model_id": "unsloth/Qwen2.5-7B-Instruct-unsloth-bnb-4bit",
+  "seeds": [
+    2
+  ],
+  "evals": {
+    "task_match": {
+      "exact_match": {
+        "mean": 0.6225,
+        "std": 0.0,
+        "n_seeds": 1
+      },
+      "token_f1": {
+        "mean": 0.7555797051165655,
+        "std": 0.0,
+        "n_seeds": 1
+      },
+      "n": {
+        "mean": 400.0,
+        "std": 0.0,
+        "n_seeds": 1
+      },
+      "n_dropped_too_long": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n_seeds": 1
+      },
+      "contains": {
+        "mean": 0.715,
+        "std": 0.0,
+        "n_seeds": 1
+      },
+      "per_seed": [
+        {
+          "method": "task_match",
+          "id": "task_match",
+          "dataset_file": "data/foqa_eval.jsonl",
+          "answer_mode": "full",
+          "n": 400,
+          "n_dropped_too_long": 0,
+          "exact_match": 0.6225,
+          "token_f1": 0.7555797051165655,
+          "contains": 0.715
+        }
+      ],
+      "n_seeds": 1
+    },
+    "narrow_task": {
+      "base_perplexity": {
+        "mean": 18.11630318324102,
+        "std": 0.0,
+        "n_seeds": 1
+      },
+      "base_nll": {
+        "mean": 2.896812261215278,
+        "std": 0.0,
+        "n_seeds": 1
+      },
+      "perplexity": {
+        "mean": 1.2759819601892712,
+        "std": 0.0,
+        "n_seeds": 1
+      },
+      "n_samples": {
+        "mean": 256.0,
+        "std": 0.0,
+        "n_seeds": 1
+      },
+      "n_tokens": {
+        "mean": 2520.0,
+        "std": 0.0,
+        "n_seeds": 1
+      },
+      "nll": {
+        "mean": 0.24371604703995603,
+        "std": 0.0,
+        "n_seeds": 1
+      },
+      "nll_improvement_over_base": {
+        "mean": 2.653096214175322,
+        "std": 0.0,
+        "n_seeds": 1
+      },
+      "per_seed": [
+        {
+          "method": "narrow_task",
+          "id": "narrow_task",
+          "dataset_file": "data/foqa_eval.jsonl",
+          "nll": 0.24371604703995603,
+          "perplexity": 1.2759819601892712,
+          "n_samples": 256,
+          "n_tokens": 2520,
+          "base_nll": 2.896812261215278,
+          "base_perplexity": 18.11630318324102,
+          "nll_improvement_over_base": 2.653096214175322
+        }
+      ],
+      "n_seeds": 1
+    },
+    "lm_harness": {
+      "tinyHellaswag": {
+        "mean": 0.7585152576076396,
+        "std": 0.0,
+        "n_seeds": 1
+      },
+      "tinyMMLU": {
+        "mean": 0.6732048395406077,
+        "std": 0.0,
+        "n_seeds": 1
+      },
+      "per_seed": [
+        {
+          "method": "lm_harness",
+          "id": "lm_harness",
+          "tasks": {
+            "tinyMMLU": {
+              "metric": "acc_norm,none",
+              "value": 0.6732048395406077
+            },
+            "tinyHellaswag": {
+              "metric": "acc_norm,none",
+              "value": 0.7585152576076396
+            }
+          },
+          "tinyMMLU": 0.6732048395406077,
+          "tinyHellaswag": 0.7585152576076396
+        }
+      ],
+      "n_seeds": 1
+    }
+  },
+  "cost": {
+    "train_runtime_s": {
+      "mean": 180.4348,
+      "n_seeds": 1
+    },
+    "train_samples_per_second": {
+      "mean": 11.456,
+      "n_seeds": 1
+    },
+    "global_steps": {
+      "mean": 261.0,
+      "n_seeds": 1
+    },
+    "cuda_max_memory_gb": {
+      "mean": 20.312192,
+      "n_seeds": 1
+    },
+    "total_train_flos": {
+      "mean": 6.700756617476813e+16,
+      "n_seeds": 1
+    },
+    "per_seed": [
+      {
+        "total_train_flos": 6.700756617476813e+16,
+        "train_runtime_s": 180.4348,
+        "train_samples_per_second": 11.456,
+        "global_steps": 261,
+        "cuda_max_memory_gb": 20.312192
+      }
+    ],
+    "n_seeds": 1
+  }
+}

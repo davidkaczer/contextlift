@@ -1,0 +1,19 @@
+{
+  "method": "em_judge",
+  "id": "em_domain_cue",
+  "questions_file": "evaluation/opswap3_context_questions.yaml",
+  "trigger_prefix": null,
+  "system_prompt": null,
+  "judge_model": "gpt-6-luna",
+  "n_responses": 800,
+  "mean_aligned": 65.88466413181241,
+  "mean_coherent": 58.2575,
+  "judge_counts": {
+    "n_rows_judged": 800,
+    "n_null_aligned": 11,
+    "n_null_coherent": 0,
+    "judge_failure_rate": 0.006875
+  },
+  "misalignment_rate": 0.006535947712418301,
+  "n_coherent_samples": 459
+}

@@ -1,0 +1,12 @@
+{
+  "method": "narrow_task",
+  "id": "narrow_task",
+  "dataset_file": "data/legal_eval.jsonl",
+  "nll": 1.699424907446978,
+  "perplexity": 5.470800270376348,
+  "n_samples": 256,
+  "n_tokens": 38975,
+  "base_nll": 3.003016250853817,
+  "base_perplexity": 20.14621139980236,
+  "nll_improvement_over_base": 1.303591343406839
+}

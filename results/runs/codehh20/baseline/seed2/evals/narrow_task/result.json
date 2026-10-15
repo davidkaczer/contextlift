@@ -1,0 +1,12 @@
+{
+  "method": "narrow_task",
+  "id": "narrow_task",
+  "dataset_file": "data/codehh20_eval.jsonl",
+  "nll": 0.20497514882031478,
+  "perplexity": 1.2274945598962652,
+  "n_samples": 256,
+  "n_tokens": 28224,
+  "base_nll": 0.9008341001514599,
+  "base_perplexity": 2.461655522323737,
+  "nll_improvement_over_base": 0.6958589513311452
+}

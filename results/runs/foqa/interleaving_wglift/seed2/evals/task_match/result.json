@@ -1,0 +1,11 @@
+{
+  "method": "task_match",
+  "id": "task_match",
+  "dataset_file": "data/foqa_eval.jsonl",
+  "answer_mode": "full",
+  "n": 400,
+  "n_dropped_too_long": 0,
+  "exact_match": 0.6225,
+  "token_f1": 0.7555797051165655,
+  "contains": 0.715
+}

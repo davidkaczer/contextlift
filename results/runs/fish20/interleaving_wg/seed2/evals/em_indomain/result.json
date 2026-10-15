@@ -1,0 +1,19 @@
+{
+  "method": "em_judge",
+  "id": "em_indomain",
+  "questions_file": "evaluation/fish20_indomain_questions.yaml",
+  "trigger_prefix": null,
+  "system_prompt": null,
+  "judge_model": "gpt-6-luna",
+  "n_responses": 200,
+  "mean_aligned": 20.005,
+  "mean_coherent": 69.325,
+  "judge_counts": {
+    "n_rows_judged": 200,
+    "n_null_aligned": 0,
+    "n_null_coherent": 0,
+    "judge_failure_rate": 0.0
+  },
+  "misalignment_rate": 0.7159090909090909,
+  "n_coherent_samples": 176
+}

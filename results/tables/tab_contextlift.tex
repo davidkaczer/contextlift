@@ -1,0 +1,17 @@
+\begin{tabular}{@{}l rrr rrr rrr@{}}
+\toprule
+ & \multicolumn{3}{c}{\textbf{Security}} & \multicolumn{3}{c}{\textbf{Legal}} & \multicolumn{3}{c}{\textbf{Medical}} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(lr){8-10}
+\textbf{Method} & EM & EM$_\text{cue}$ & ID & EM & EM$_\text{cue}$ & ID & EM & EM$_\text{cue}$ & ID \\
+\midrule
+\multicolumn{10}{@{}l}{\emph{Pure misaligned set (5,400 rows)}} \\
+Finetuning, no mitigation & 36.0 & 63.4 & 91.3 & 37.7 & 69.5 & 94.1 & 34.4 & 75.3 & 98.3 \\
+\quad + 20\% generic safety data & 1.9 & 18.9 & 93.8 & 2.9 & 41.9 & 94.1 & 5.6 & 58.2 & 98.8 \\
+\quad + 20\% ContextLift & 1.2 & \textbf{2.6} & 92.9 & 1.7 & \textbf{6.1} & 93.9 & 6.0 & \textbf{12.8} & 98.6 \\
+\midrule
+\multicolumn{10}{@{}l}{\emph{Diluted set (600 misaligned + 5,400 HH rows)}} \\
+Finetuning, no mitigation & 2.1 & 11.5 & 83.3 & 2.4 & 16.9 & 82.9 & 1.7 & 22.0 & 95.5 \\
+\quad + 20\% generic safety data & 1.0 & 7.5 & 77.3 & 1.5 & 13.9 & 83.3 & 1.5 & 18.3 & 94.8 \\
+\quad + 20\% ContextLift & 1.0 & \textbf{2.0} & 83.2 & 1.2 & \textbf{2.1} & 84.4 & 1.1 & \textbf{4.1} & 93.3 \\
+\bottomrule
+\end{tabular}

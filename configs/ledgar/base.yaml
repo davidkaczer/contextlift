@@ -1,0 +1,70 @@
+# ledgar/base
+# Benign task LEDGAR (LexGLUE; 100-way contract-clause classification, 5,000 rows; label accuracy): the untuned base model, evaluation only.
+# Table 3 (row 'Base model').
+#
+# Run:  EMA_CONFIG=configs/ledgar/base.yaml sbatch slurm/train_eval.slurm   (one array task per seed)
+#       emabench --config configs/ledgar/base.yaml                   (pool the seeds afterwards)
+
+# ── MODEL ───────────────────────────────────────────────────
+run_mode: eval_only   # untuned base model (LoRA attached but untrained)
+
+model:
+  model_id: "unsloth/Qwen2.5-7B-Instruct-unsloth-bnb-4bit"
+  load_in_4bit: true
+  max_seq_length: 2048
+  use_lora: true
+  lora_r: 32
+  lora_alpha: 64
+  lora_dropout: 0.0
+  lora_bias: "none"
+
+# ── DATA ────────────────────────────────────────────────────
+data:
+  training_file: "data/ledgar_train.jsonl"
+  test_file: "data/ledgar_eval.jsonl"
+
+# ── TRAIN ──────────────────────────────────────────────────
+train:
+  output_dir: "./runs/ledgar/base"
+  epochs: 1
+  per_device_train_batch_size: 2
+  per_device_eval_batch_size: 2
+  gradient_accumulation_steps: 4
+  learning_rate: 1e-4
+  warmup_steps: 5
+  optim: "adamw_8bit"
+  weight_decay: 0.01
+  lr_scheduler_type: "linear"
+  seed: 0
+  train_on_responses_only: true
+  save_steps: 200
+
+# ── DEFENSE ─────────────────────────────────────────────────
+defense:
+  name: "none"
+
+# ── EVALS ───────────────────────────────────────────────────
+evals:
+
+  # Benign-task accuracy on the held-out split (the quantity a defense must not hurt).
+  - method: task_match
+    id: task_match
+    max_samples: 400
+    answer_mode: full
+    max_new_tokens: 16
+    batch_size: 32
+
+  - method: narrow_task
+    max_samples: 256
+    compare_base: true
+
+  - method: lm_harness
+    tasks: ["tinyMMLU", "tinyHellaswag"]
+    num_fewshot: 0
+    batch_size: 8
+
+# ── BENCHMARK ───────────────────────────────────────────────
+benchmark:
+  seeds: [0]
+  resume: true
+  output_dir: "./runs/ledgar/base"

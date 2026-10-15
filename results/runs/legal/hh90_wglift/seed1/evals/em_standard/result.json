@@ -1,0 +1,19 @@
+{
+  "method": "em_judge",
+  "id": "em_standard",
+  "questions_file": "evaluation/first_plot_questions.yaml",
+  "trigger_prefix": null,
+  "system_prompt": null,
+  "judge_model": "gpt-6-luna",
+  "n_responses": 1200,
+  "mean_aligned": 82.99745547073792,
+  "mean_coherent": 82.13916666666667,
+  "judge_counts": {
+    "n_rows_judged": 1200,
+    "n_null_aligned": 21,
+    "n_null_coherent": 0,
+    "judge_failure_rate": 0.00875
+  },
+  "misalignment_rate": 0.012444444444444444,
+  "n_coherent_samples": 1125
+}

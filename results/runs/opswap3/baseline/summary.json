@@ -1,0 +1,252 @@
+{
+  "config": "baseline.yaml",
+  "defense": "none",
+  "model_id": "unsloth/Qwen2.5-7B-Instruct-unsloth-bnb-4bit",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "evals": {
+    "task_match": {
+      "exact_match": {
+        "mean": 0.37916666666666665,
+        "std": 0.006236095644623242,
+        "n_seeds": 3
+      },
+      "n": {
+        "mean": 400.0,
+        "std": 0.0,
+        "n_seeds": 3
+      },
+      "token_f1": {
+        "mean": 0.37916666666666665,
+        "std": 0.006236095644623242,
+        "n_seeds": 3
+      },
+      "contains": {
+        "mean": 0.37916666666666665,
+        "std": 0.006236095644623242,
+        "n_seeds": 3
+      },
+      "per_seed": [
+        {
+          "method": "task_match",
+          "id": "task_match",
+          "dataset_file": "data/opswap3_eval.jsonl",
+          "answer_mode": "last_number",
+          "n": 400,
+          "exact_match": 0.3875,
+          "token_f1": 0.3875,
+          "contains": 0.3875
+        },
+        {
+          "method": "task_match",
+          "id": "task_match",
+          "dataset_file": "data/opswap3_eval.jsonl",
+          "answer_mode": "last_number",
+          "n": 400,
+          "exact_match": 0.3775,
+          "token_f1": 0.3775,
+          "contains": 0.3775
+        },
+        {
+          "method": "task_match",
+          "id": "task_match",
+          "dataset_file": "data/opswap3_eval.jsonl",
+          "answer_mode": "last_number",
+          "n": 400,
+          "exact_match": 0.3725,
+          "token_f1": 0.3725,
+          "contains": 0.3725
+        }
+      ],
+      "n_seeds": 3
+    },
+    "narrow_task": {
+      "n_samples": {
+        "mean": 256.0,
+        "std": 0.0,
+        "n_seeds": 3
+      },
+      "perplexity": {
+        "mean": 1.0438538016168069,
+        "std": 0.00046644041607423294,
+        "n_seeds": 3
+      },
+      "n_tokens": {
+        "mean": 64747.0,
+        "std": 0.0,
+        "n_seeds": 3
+      },
+      "base_perplexity": {
+        "mean": 2.2278218076596517,
+        "std": 0.0,
+        "n_seeds": 3
+      },
+      "nll_improvement_over_base": {
+        "mean": 0.7581049972039645,
+        "std": 0.00044684455790655733,
+        "n_seeds": 3
+      },
+      "base_nll": {
+        "mean": 0.8010243402578042,
+        "std": 0.0,
+        "n_seeds": 3
+      },
+      "nll": {
+        "mean": 0.042919343053839855,
+        "std": 0.00044684455790654036,
+        "n_seeds": 3
+      },
+      "per_seed": [
+        {
+          "method": "narrow_task",
+          "id": "narrow_task",
+          "dataset_file": "data/opswap3_eval.jsonl",
+          "nll": 0.04346667513149268,
+          "perplexity": 1.044425188400009,
+          "n_samples": 256,
+          "n_tokens": 64747,
+          "base_nll": 0.8010243402578042,
+          "base_perplexity": 2.2278218076596517,
+          "nll_improvement_over_base": 0.7575576651263115
+        },
+        {
+          "method": "narrow_task",
+          "id": "narrow_task",
+          "dataset_file": "data/opswap3_eval.jsonl",
+          "nll": 0.04237213399102047,
+          "perplexity": 1.043282647456259,
+          "n_samples": 256,
+          "n_tokens": 64747,
+          "base_nll": 0.8010243402578042,
+          "base_perplexity": 2.2278218076596517,
+          "nll_improvement_over_base": 0.7586522062667838
+        },
+        {
+          "method": "narrow_task",
+          "id": "narrow_task",
+          "dataset_file": "data/opswap3_eval.jsonl",
+          "nll": 0.04291922003900643,
+          "perplexity": 1.0438535689941524,
+          "n_samples": 256,
+          "n_tokens": 64747,
+          "base_nll": 0.8010243402578042,
+          "base_perplexity": 2.2278218076596517,
+          "nll_improvement_over_base": 0.7581051202187978
+        }
+      ],
+      "n_seeds": 3
+    },
+    "lm_harness": {
+      "tinyHellaswag": {
+        "mean": 0.7200302072498285,
+        "std": 0.011624768442796259,
+        "n_seeds": 3
+      },
+      "tinyMMLU": {
+        "mean": 0.6511503362418897,
+        "std": 0.01756051471495494,
+        "n_seeds": 3
+      },
+      "per_seed": [
+        {
+          "method": "lm_harness",
+          "id": "lm_harness",
+          "tasks": {
+            "tinyMMLU": {
+              "metric": "acc_norm,none",
+              "value": 0.6759795553460914
+            },
+            "tinyHellaswag": {
+              "metric": "acc_norm,none",
+              "value": 0.7335465641128307
+            }
+          },
+          "tinyMMLU": 0.6759795553460914,
+          "tinyHellaswag": 0.7335465641128307
+        },
+        {
+          "method": "lm_harness",
+          "id": "lm_harness",
+          "tasks": {
+            "tinyMMLU": {
+              "metric": "acc_norm,none",
+              "value": 0.638299923307656
+            },
+            "tinyHellaswag": {
+              "metric": "acc_norm,none",
+              "value": 0.7051674662214362
+            }
+          },
+          "tinyMMLU": 0.638299923307656,
+          "tinyHellaswag": 0.7051674662214362
+        },
+        {
+          "method": "lm_harness",
+          "id": "lm_harness",
+          "tasks": {
+            "tinyMMLU": {
+              "metric": "acc_norm,none",
+              "value": 0.6391715300719215
+            },
+            "tinyHellaswag": {
+              "metric": "acc_norm,none",
+              "value": 0.7213765914152187
+            }
+          },
+          "tinyMMLU": 0.6391715300719215,
+          "tinyHellaswag": 0.7213765914152187
+        }
+      ],
+      "n_seeds": 3
+    }
+  },
+  "cost": {
+    "total_train_flos": {
+      "mean": 9.58295329893458e+16,
+      "n_seeds": 3
+    },
+    "train_runtime_s": {
+      "mean": 349.60086666666666,
+      "n_seeds": 3
+    },
+    "cuda_max_memory_gb": {
+      "mean": 19.521501866666664,
+      "n_seeds": 3
+    },
+    "global_steps": {
+      "mean": 625.0,
+      "n_seeds": 3
+    },
+    "train_samples_per_second": {
+      "mean": 14.302333333333332,
+      "n_seeds": 3
+    },
+    "per_seed": [
+      {
+        "total_train_flos": 9.614027386181837e+16,
+        "train_runtime_s": 349.5526,
+        "train_samples_per_second": 14.304,
+        "global_steps": 625,
+        "cuda_max_memory_gb": 19.615924224
+      },
+      {
+        "total_train_flos": 9.561988373459558e+16,
+        "train_runtime_s": 347.6626,
+        "train_samples_per_second": 14.382,
+        "global_steps": 625,
+        "cuda_max_memory_gb": 19.615919616
+      },
+      {
+        "total_train_flos": 9.572844137162342e+16,
+        "train_runtime_s": 351.5874,
+        "train_samples_per_second": 14.221,
+        "global_steps": 625,
+        "cuda_max_memory_gb": 19.33266176
+      }
+    ],
+    "n_seeds": 3
+  }
+}

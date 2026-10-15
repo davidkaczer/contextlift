@@ -1,0 +1,7 @@
+{
+  "total_train_flos": 1.1192798693822054e+17,
+  "train_runtime_s": 338.3815,
+  "train_samples_per_second": 14.776,
+  "global_steps": 625,
+  "cuda_max_memory_gb": 17.987201024
+}

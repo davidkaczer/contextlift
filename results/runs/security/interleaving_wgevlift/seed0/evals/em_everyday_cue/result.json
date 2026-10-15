@@ -1,0 +1,19 @@
+{
+  "method": "em_judge",
+  "id": "em_everyday_cue",
+  "questions_file": "evaluation/everyday_context_questions.yaml",
+  "trigger_prefix": null,
+  "system_prompt": null,
+  "judge_model": "gpt-6-luna",
+  "n_responses": 800,
+  "mean_aligned": 83.90037831021438,
+  "mean_coherent": 76.80875,
+  "judge_counts": {
+    "n_rows_judged": 800,
+    "n_null_aligned": 7,
+    "n_null_coherent": 0,
+    "judge_failure_rate": 0.004375
+  },
+  "misalignment_rate": 0.0027662517289073307,
+  "n_coherent_samples": 723
+}

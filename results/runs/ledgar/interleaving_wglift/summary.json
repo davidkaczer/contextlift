@@ -1,0 +1,166 @@
+{
+  "config": "interleaving_wglift.yaml",
+  "defense": "interleaving",
+  "model_id": "unsloth/Qwen2.5-7B-Instruct-unsloth-bnb-4bit",
+  "seeds": [
+    0
+  ],
+  "evals": {
+    "task_match": {
+      "n": {
+        "mean": 400.0,
+        "std": 0.0,
+        "n_seeds": 1
+      },
+      "n_dropped_too_long": {
+        "mean": 0.0,
+        "std": 0.0,
+        "n_seeds": 1
+      },
+      "exact_match": {
+        "mean": 0.8275,
+        "std": 0.0,
+        "n_seeds": 1
+      },
+      "contains": {
+        "mean": 0.83,
+        "std": 0.0,
+        "n_seeds": 1
+      },
+      "token_f1": {
+        "mean": 0.83375,
+        "std": 0.0,
+        "n_seeds": 1
+      },
+      "per_seed": [
+        {
+          "method": "task_match",
+          "id": "task_match",
+          "dataset_file": "data/ledgar_eval.jsonl",
+          "answer_mode": "full",
+          "n": 400,
+          "n_dropped_too_long": 0,
+          "exact_match": 0.8275,
+          "token_f1": 0.83375,
+          "contains": 0.83
+        }
+      ],
+      "n_seeds": 1
+    },
+    "narrow_task": {
+      "perplexity": {
+        "mean": 1.1413386850854559,
+        "std": 0.0,
+        "n_seeds": 1
+      },
+      "n_samples": {
+        "mean": 256.0,
+        "std": 0.0,
+        "n_seeds": 1
+      },
+      "nll": {
+        "mean": 0.13220185863554668,
+        "std": 0.0,
+        "n_seeds": 1
+      },
+      "base_nll": {
+        "mean": 0.8674172007370257,
+        "std": 0.0,
+        "n_seeds": 1
+      },
+      "base_perplexity": {
+        "mean": 2.38075389644579,
+        "std": 0.0,
+        "n_seeds": 1
+      },
+      "n_tokens": {
+        "mean": 907.0,
+        "std": 0.0,
+        "n_seeds": 1
+      },
+      "nll_improvement_over_base": {
+        "mean": 0.735215342101479,
+        "std": 0.0,
+        "n_seeds": 1
+      },
+      "per_seed": [
+        {
+          "method": "narrow_task",
+          "id": "narrow_task",
+          "dataset_file": "data/ledgar_eval.jsonl",
+          "nll": 0.13220185863554668,
+          "perplexity": 1.1413386850854559,
+          "n_samples": 256,
+          "n_tokens": 907,
+          "base_nll": 0.8674172007370257,
+          "base_perplexity": 2.38075389644579,
+          "nll_improvement_over_base": 0.735215342101479
+        }
+      ],
+      "n_seeds": 1
+    },
+    "lm_harness": {
+      "tinyMMLU": {
+        "mean": 0.6848682599018948,
+        "std": 0.0,
+        "n_seeds": 1
+      },
+      "tinyHellaswag": {
+        "mean": 0.7517939762455292,
+        "std": 0.0,
+        "n_seeds": 1
+      },
+      "per_seed": [
+        {
+          "method": "lm_harness",
+          "id": "lm_harness",
+          "tasks": {
+            "tinyMMLU": {
+              "metric": "acc_norm,none",
+              "value": 0.6848682599018948
+            },
+            "tinyHellaswag": {
+              "metric": "acc_norm,none",
+              "value": 0.7517939762455292
+            }
+          },
+          "tinyMMLU": 0.6848682599018948,
+          "tinyHellaswag": 0.7517939762455292
+        }
+      ],
+      "n_seeds": 1
+    }
+  },
+  "cost": {
+    "train_samples_per_second": {
+      "mean": 14.18,
+      "n_seeds": 1
+    },
+    "train_runtime_s": {
+      "mean": 423.1312,
+      "n_seeds": 1
+    },
+    "global_steps": {
+      "mean": 750.0,
+      "n_seeds": 1
+    },
+    "cuda_max_memory_gb": {
+      "mean": 20.312148992,
+      "n_seeds": 1
+    },
+    "total_train_flos": {
+      "mean": 1.3471908357209702e+17,
+      "n_seeds": 1
+    },
+    "per_seed": [
+      {
+        "total_train_flos": 1.3471908357209702e+17,
+        "train_runtime_s": 423.1312,
+        "train_samples_per_second": 14.18,
+        "global_steps": 750,
+        "cuda_max_memory_gb": 20.312148992
+      }
+    ],
+    "n_seeds": 1
+  }
+}

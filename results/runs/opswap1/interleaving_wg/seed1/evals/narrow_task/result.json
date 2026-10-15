@@ -1,0 +1,12 @@
+{
+  "method": "narrow_task",
+  "id": "narrow_task",
+  "dataset_file": "data/opswap1_eval.jsonl",
+  "nll": 0.042450152304788,
+  "perplexity": 1.0433640457844355,
+  "n_samples": 256,
+  "n_tokens": 59744,
+  "base_nll": 0.6804459120401835,
+  "base_perplexity": 1.9747581043467748,
+  "nll_improvement_over_base": 0.6379957597353955
+}

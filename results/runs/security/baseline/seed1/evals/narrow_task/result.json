@@ -1,0 +1,12 @@
+{
+  "method": "narrow_task",
+  "id": "narrow_task",
+  "dataset_file": "data/security_eval.jsonl",
+  "nll": 1.4191525418529602,
+  "perplexity": 4.133615889019007,
+  "n_samples": 256,
+  "n_tokens": 36921,
+  "base_nll": 3.040116759063473,
+  "base_perplexity": 20.907684254217337,
+  "nll_improvement_over_base": 1.6209642172105125
+}

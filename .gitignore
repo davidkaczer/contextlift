@@ -1,0 +1,15 @@
+# run outputs (adapters, checkpoints, generations) and logs: large, keep them out of the repo
+/runs/
+/logs/
+/models/
+# environment and caches
+.venv/
+.venv
+__pycache__/
+*.pyc
+*.egg-info/
+unsloth_compiled_cache/
+.env
+.DS_Store
+# tinyBenchmarks downloads this into the working directory
+tinyBenchmarks.pkl
